@@ -119,7 +119,7 @@ If you happen to write one of the adapters, don't hesitate to [make a pull reque
 ## Changelog
 
 * [v0.2.0](https://github.com/railslove/birthday/compare/v0.1.1...v0.2.0)
-  * added `*field*_today` scopes to quickly look up anniversaries for today (acts like `find_*field*s_for(Date.today)`)
+  * added `*field*_today` scopes to quickly look up anniversaries for today (acts like `find_*field*s_for(Date.current)`)
 
 * [v0.1.1](https://github.com/railslove/birthday/compare/v0.1.0...v0.1.1)
   * fixed autoloading of `Adapter` class in Rails 2 environment

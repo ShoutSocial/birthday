@@ -34,7 +34,7 @@ describe Marriage do
 
   it 'finds people\'s by anniversary date' do
     time_travel_to Date.parse('2011-08-08')
-    anniversaries_today = Marriage.find_anniversaries_for(Date.today)
+    anniversaries_today = Marriage.find_anniversaries_for(Date.current)
     expect(anniversaries_today).not_to include(@m1)
     expect(anniversaries_today).to include(@m2)
   end
@@ -86,7 +86,7 @@ describe Person do
 
   it 'finds people\'s by birthday date' do
     time_travel_to Date.parse('2011-08-08')
-    birthdays_today = Person.find_birthdays_for(Date.today)
+    birthdays_today = Person.find_birthdays_for(Date.current)
     expect(birthdays_today).not_to include(@p1)
     expect(birthdays_today).to include(@p2)
   end
